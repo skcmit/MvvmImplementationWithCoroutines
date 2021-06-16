@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_layout"/>
+
+    <include
+        android:id="@+id/error_layout"
+        android:visibility="gone"
+        layout="@layout/error_layout"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/image_height"
+        android:layout_height="@dimen/image_width"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:textStyle="bold"
+        android:textSize="@dimen/large_font_size"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="Santosh" />
+
+    <TextView
+        android:id="@+id/location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:visibility="gone"
+        android:text="@string/location"
+        style="@style/TextLabelStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bio" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        style="@style/TextValueStyle"
+        app:layout_constraintLeft_toRightOf="@+id/guide"
+        app:layout_constraintTop_toTopOf="@+id/location_label"
+        tools:text="Bengaluru" />
+
+    <TextView
+        android:id="@+id/followers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/followers"
+        android:visibility="gone"
+        style="@style/TextLabelStyle"
+        app:layout_constraintStart_toStartOf="@id/location_label"
+        app:layout_constraintTop_toBottomOf="@+id/location_label" />
+
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextValueStyle"
+        app:layout_constraintLeft_toRightOf="@+id/guide"
+        app:layout_constraintTop_toTopOf="@+id/followers_label"
+        tools:text="4" />
+
+
+    <TextView
+        android:id="@+id/following_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:text="@string/following"
+        android:visibility="gone"
+        style="@style/TextLabelStyle"
+        app:layout_constraintStart_toStartOf="@id/location_label"
+        app:layout_constraintTop_toBottomOf="@+id/followers_label" />
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        style="@style/TextValueStyle"
+        app:layout_constraintLeft_toRightOf="@+id/guide"
+        app:layout_constraintTop_toTopOf="@+id/following_label"
+        tools:text="4" />
+
+    <TextView
+        android:id="@+id/bio_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:text="@string/bio"
+        android:visibility="gone"
+        style="@style/TextLabelStyle"
+        app:layout_constraintStart_toStartOf="@id/location_label"
+        app:layout_constraintRight_toLeftOf="@+id/bio"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/TextValueStyle"
+        app:layout_constraintLeft_toRightOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bio_label"
+        tools:text="I am " />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

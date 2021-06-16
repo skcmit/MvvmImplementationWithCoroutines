@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NaviTestAssignment</string>
+    <string name="location">Location:</string>
+    <string name="followers">Followers:</string>
+    <string name="following">Following:</string>
+    <string name="bio">Bio:</string>
+    <string name="created_at">Created At:</string>
+    <string name="closed_at">Closed At:</string>
+    <string name="not_available">Not Available</string>
+    <string name="title">Title:</string>
+    <string name="user_image">User Image</string>
+    <string name="user_profile">User Profile</string>
+    <string name="generic_error">Something went wrong</string>
+    <string name="retry">Retry</string>
+</resources>

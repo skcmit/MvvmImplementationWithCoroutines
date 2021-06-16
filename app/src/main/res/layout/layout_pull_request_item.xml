@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="@dimen/small_image_width"
+        android:layout_height="@dimen/small_image_height"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginLeft="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_marginEnd="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:contentDescription="@string/user_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/TextLabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:singleLine="true"
+        android:text="@string/title"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/created_date_label"
+        app:layout_constraintTop_toBottomOf="@+id/closed_date_label"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextValueStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/regular_margin"
+        android:layout_marginRight="@dimen/regular_margin"
+        app:layout_constraintLeft_toLeftOf="@+id/created_date"
+        app:layout_constraintStart_toStartOf="@+id/created_date"
+        app:layout_constraintTop_toTopOf="@+id/titleLabel"
+        tools:text="Some random string which is going to be " />
+
+    <TextView
+        android:id="@+id/created_date_label"
+        style="@style/TextLabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:singleLine="true"
+        android:text="@string/created_at"
+        app:layout_constraintLeft_toRightOf="@+id/userImage"
+        app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+    <TextView
+        android:id="@+id/created_date"
+        style="@style/TextValueStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/regular_margin"
+        android:layout_marginLeft="@dimen/regular_margin"
+        android:singleLine="true"
+        app:layout_constraintLeft_toRightOf="@+id/created_date_label"
+        app:layout_constraintTop_toTopOf="@+id/created_date_label" />
+
+    <TextView
+        android:id="@+id/closed_date_label"
+        style="@style/TextLabelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:singleLine="true"
+        android:text="@string/closed_at"
+        app:layout_constraintLeft_toLeftOf="@+id/created_date_label"
+        app:layout_constraintTop_toBottomOf="@+id/created_date" />
+
+    <TextView
+        android:id="@+id/closed_date"
+        style="@style/TextValueStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        app:layout_constraintLeft_toLeftOf="@+id/created_date"
+        app:layout_constraintTop_toTopOf="@+id/closed_date_label" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:background="@color/colorDivider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

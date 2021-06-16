@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">#ffff</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorSecondary</item>
+    </style>
+
+    <style name="TextLabelStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:textSize">@dimen/regular_font_size</item>
+    </style>
+
+    <style name="TextValueStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">@dimen/large_font_size</item>
+    </style>
+
+    <style name="TextErrorStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">@dimen/large_font_size</item>
+    </style>
+
+</resources>
